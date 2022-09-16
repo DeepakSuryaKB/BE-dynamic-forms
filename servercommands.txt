@@ -1,0 +1,10 @@
+enter into putty with user name deepak.surya
+
+1.sudo su - (will change to root user)
+2.cd /opt/scrapper (will go to scrapper folder)
+3.nohup node scrapper.js & (starts the server which listens at port 3000)
+4.cat nohup.out (to see console logs)
+5.netstat -tunlp | grep 3000 ( to check port is open and server is running )
+6.ps -ef | grep scrapper (gets you the process id )
+7.kill -9 process-id (to kill perticular process)
+8.sudo cat /dev/null > nohup.out (clear console logs)

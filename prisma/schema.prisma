@@ -1,0 +1,25 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+model forms_details {
+  form_name     String  @id @db.VarChar(200)
+  form_structure String? @db.LongText
+}
+
+model forms_data {
+
+  id String @id @db.VarChar(200)
+  form_name String @db.VarChar(200)
+  data String @db.LongText
+
+
+}
